@@ -25,6 +25,7 @@ public class ROIsController : MonoBehaviour
     double factor_low, factor_mid, factor_midlow, factor_high;
 
     double EPSILON = 0.01f;
+    bool IsUpdatethrROI;
 
     public delegate void OnUpdateROIthr(double low, double mid, double high);
     public static event OnUpdateROIthr UpdateROIthr;
@@ -177,8 +178,15 @@ public class ROIsController : MonoBehaviour
                     }
                 }
             }
+            //IsUpdatethrROI = true;
         }
+        //if (IsUpdatethrROI)
+        //{
+        //    UpdateROIthrLgd(low_thr, mid_thr, high_thr);
+        //    IsUpdatethrROI = false;
+        //}
         UpdateROIthrLgd(low_thr, mid_thr, high_thr);
+
     } 
     #endregion
 
